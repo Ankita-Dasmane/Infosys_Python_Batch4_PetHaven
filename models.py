@@ -6,7 +6,7 @@ from datetime import datetime, timezone, timedelta, time
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin
 from flask import current_app as app , jsonify
-from sqlalchemy import text  # Add this import
+from sqlalchemy import text, func  # Add this func also from db
 import matplotlib.pyplot as plt
 import numpy as np
 import os
@@ -873,5 +873,8 @@ def fetch_recent_bookings():
             final_data = []
 
         return final_data
+
+
+
 
 
